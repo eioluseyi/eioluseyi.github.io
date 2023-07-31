@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chevron right */
+.gg-chevron-right {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.gg-chevron-right::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(-45deg);
+  right: 6px;
+  top: 4px;
+}
+
+/* Chevron left */
+.gg-chevron-left {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 22px;
+  height: 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.gg-chevron-left::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  transform: rotate(45deg);
+  left: 6px;
+  top: 4px;
+}
+
+/* Hamburger */
+.gg-menu-right-alt {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 14px;
+  transform: scale(var(--ggs, 1));
+  translate: 0 -6px;
+}
+
+.gg-menu-right-alt::after,
+.gg-menu-right-alt::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  height: 2px;
+  border-radius: 4px;
+  background: currentColor;
+}
+
+.gg-menu-right-alt::before {
+  width: 16px;
+  box-shadow: 0 12px 0;
+}
+
+.gg-menu-right-alt::after {
+  width: 10px;
+  right: 0;
+  translate: 0 6px;
+  /* top: 6px */
+}
+
+/* Menu circle */
+.gg-shape-circle {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border: 3px solid;
+  border-radius: 100px;
+}
