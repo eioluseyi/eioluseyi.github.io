@@ -1,5 +1,6 @@
 <template>
-    <div class="flex gap-4 [&_svg]:fill-white">
+    <div
+        class="flex gap-4 [&_svg]:fill-slate-500 [&_svg:hover]:fill-slate-400 [&_svg]:transition-all [&_svg]:duration-300 [&_svg]:ease-out">
         <NuxtLink to="https://github.com/eioluseyi" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
                 <path
