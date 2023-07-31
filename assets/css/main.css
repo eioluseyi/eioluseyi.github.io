@@ -62,7 +62,6 @@
   width: 16px;
   height: 14px;
   transform: scale(var(--ggs, 1));
-  translate: 0 -6px;
 }
 
 .gg-menu-right-alt::after,
@@ -84,8 +83,7 @@
 .gg-menu-right-alt::after {
   width: 10px;
   right: 0;
-  translate: 0 6px;
-  /* top: 6px */
+  top: 6px;
 }
 
 /* Menu circle */
@@ -98,4 +96,13 @@
   height: 16px;
   border: 3px solid;
   border-radius: 100px;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.07s ease-out;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0.3;
 }
