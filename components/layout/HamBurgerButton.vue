@@ -1,3 +1,5 @@
 <template>
-    <button class="gg-menu-right-alt"></button>
+    <button>
+        <span class="gg-menu-right-alt"></span>
+    </button>
 </template>

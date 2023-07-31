@@ -1,7 +1,11 @@
 <script setup lang="ts">
+const route = useRoute()
 const router = useRouter();
 
-const goBack = () => router.back();
+const goBack = () => {
+    if (route.path === "/") return;
+    router.back();
+};
 </script>
 
 <template>
