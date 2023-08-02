@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-button:vertical {
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600;
+  background-clip: content-box;
+  border: 0 solid transparent;
+  border-width: 0 3px;
+  border-radius: 30px;
+}
+
 /* Chevron right */
 .gg-chevron-right {
   box-sizing: border-box;
