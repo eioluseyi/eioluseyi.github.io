@@ -68,7 +68,7 @@ const setMousePosition = (evt: MouseEvent) => {
 
     background-color: #6D3474;
 
-    animation-duration: 7s;
+    animation-duration: 5s;
     z-index: -1;
   }
 
