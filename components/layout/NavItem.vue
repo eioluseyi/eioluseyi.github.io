@@ -1,23 +1,34 @@
 <script setup lang="ts">
+import Skeleton from "../pages/Skeleton.vue";
+
+type Props = {
+    routeIndex: number;
+    route: RouteType;
+}
+
+const props = defineProps<Props>();
 
 const router = useRouter();
 
 const isNavOpen = inject<boolean>("isNavOpen");
 const onNavClose = inject<() => void>("onNavClose");
+const scrollPercentage = ref(inject<number>("scrollPercentage", 0));
+
+const itemFraction = computed(() => (props.routeIndex + 0) / routeList.length);
+const { translateValue, blurValue, scaleValue } = useNavScroll({ itemFraction, scrollPercentage });
 
 const loadPage = () => {
     if (isNavOpen && onNavClose) {
-        router.push("/motivation");
+        router.push(props.route.path);
         onNavClose();
     }
 }
-
 </script>
 
 <template>
-    <div class="min-w-full translate-x-0 p-6 pb-0 rounded-3xl transition-all duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
-        :class="{ '[&>div]:pointer-events-none !duration-700 scale-[0.63] backdrop-blur-2xl blur-[1px] bg-[#1F232Ddd] border shadow-3xl': isNavOpen }"
-        @click="loadPage">
-        <LazyPagesMotivation />
+    <div class="min-w-full absolute inset-0 p-6 pb-0 rounded-3xl transition-all duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
+        :class="{ '[&>div]:pointer-events-none !duration-700 backdrop-blur-2xl bg-[#1F232Ddd] border shadow-3xl': isNavOpen }"
+        :style="`translate: ${translateValue}px 0; filter: blur(${blurValue}px); scale: ${scaleValue}`" @click="loadPage">
+        <component :is="route.contentComponent ?? Skeleton" />
     </div>
 </template>

@@ -16,7 +16,7 @@ provide('onNavToggle', onNavToggle);
         <div
             class="h-full rounded-[32px] p-[2px] bg-gradient-to-br from-[#6D3474] via-30% via-[#1B1F28] to-[#2C323A] shadow-2xl shadow-black">
             <div
-                class="flex flex-col show-cursor hover:cursor-auto bg-gradient-to-br from-[#1B1F2899] to-40% to-[#1B1F28dd] h-full w-full overflow-hidden backdrop-blur rounded-[30px]">
+                class="flex flex-col relative show-cursor hover:cursor-auto bg-gradient-to-br from-[#1B1F2899] to-40% to-[#1B1F28dd] h-full w-full overflow-hidden backdrop-blur rounded-[30px]">
                 <LayoutNavViewWrapper>
                     <slot />
                 </LayoutNavViewWrapper>
