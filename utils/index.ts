@@ -20,3 +20,9 @@ export const routeList: RouteListType = [
     path: "/say-hello",
   },
 ];
+
+export const getY = (x: number, maxHeight: number = 50, delay: number = 50) => {
+  const val = (100 / maxHeight + (delay / x) ** 10) ** -1 * 100;
+
+  return val;
+};
