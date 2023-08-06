@@ -45,15 +45,9 @@ const handleScroll = (evt: Event) => {
 };
 
 watchEffect(() => {
-    // console.log(translateValue.value);
     if (isNavOpen.value && scrollWrapper.value && currentElement.value.componentRef) {
-
-        // console.log(currentElement.value?.componentRef);
-
         nextTick(() => {
             currentElement.value.componentRef.scrollIntoView();
-            const currentScrollLeftPosition = 0.2 * scrollWrapper.value.scrollWidth;
-            // scrollWrapper.value.scrollLeft = scrollWrapper.value.scrollLeft - currentScrollLeftPosition;
         });
     }
 });
