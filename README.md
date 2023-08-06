@@ -15,3 +15,5 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - Mobile responsiveness
 - Projects content, using github api
 - Add version for @media (prefers-reduced-motion)
+- Change repo name to eioluseyi.github.io
+- Change project name in package.json
