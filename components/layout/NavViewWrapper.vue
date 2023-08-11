@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import Skeleton from '../pages/Skeleton.vue';
 
-
 const scrollWrapper = ref();
-const currentElement = ref();
 const scrollPercentage = ref(0);
-
-provide('scrollPercentage', scrollPercentage);
-
+const elementRefList = ref<HTMLElement[]>([]);
 const isNavOpen = ref(inject("isNavOpen"));
 const onNavClose = inject<() => void>("onNavClose");
 
@@ -23,20 +19,6 @@ const currentPathIndex = computed<number>(() => {
     return routeList.findIndex(itm => itm.path === path) ?? 0;
 });
 
-
-// return all routes before currentPathIndex
-const routesBefore = computed(() => routeList.filter((_itm, idx) => idx < currentPathIndex.value));
-
-// return current route with currentPathIndex
-const currentRoute = computed(() => routeList.find((_itm, idx) => idx === currentPathIndex.value) ?? { path: "/" });
-
-// return all routes after currentPathIndex
-const routesAfter = computed(() => routeList.filter((_itm, idx) => idx > currentPathIndex.value));
-
-const itemFraction = computed(() => (currentPathIndex.value + 1) / routeList.length);
-
-const { translateValue, blurValue, scaleValue } = useNavScroll({ itemFraction, scrollPercentage });
-
 const handleScroll = (evt: Event) => {
     const elm = evt.target as HTMLElement;
 
@@ -45,19 +27,25 @@ const handleScroll = (evt: Event) => {
 };
 
 watchEffect(() => {
-    if (isNavOpen.value && scrollWrapper.value && currentElement.value.componentRef) {
+    const currElm = elementRefList.value[currentPathIndex.value] as HTMLElement & { componentRef: HTMLElement }; // currentElement.value?.componentRef;
+
+    if (isNavOpen.value && scrollWrapper.value && currElm.componentRef) {
         nextTick(() => {
-            currentElement.value.componentRef.scrollIntoView();
+            setTimeout(() =>
+                currElm.componentRef.scrollIntoView(), 0);
         });
     }
 });
 
+provide('scrollPercentage', scrollPercentage);
+
 </script>
 
 <template>
-    <div class="flex flex-co flex-1 h-full overflow-y-hidden overflow-x-scroll no-scrollbar"
+    <div class="flex flex-co flex-1 h-full relative overflow-y-hidden overflow-x-scroll no-scrollbar"
         :class="{ 'masked-side': isNavOpen }" ref="scrollWrapper" @scroll="handleScroll">
-        <LayoutNavItem v-show="isNavOpen" v-for="(routeItm, idx) in routesBefore" :route-index="idx" :route="routeItm">
+        <LayoutNavItem v-for="(routeItm, idx) in routeList" :route-index="idx" :route="routeItm" ref="elementRefList"
+            :is-current-route="idx === currentPathIndex">
             <component :is="routeItm.contentComponent ?? Skeleton" />
         </LayoutNavItem>
         <!-- <div class="min-w-full sticky p-6 pb-0 rounded-3xl transition-al duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
@@ -66,13 +54,12 @@ watchEffect(() => {
             ref="currentElement" @click="isNavOpen && onNavClose && onNavClose()">
             <slot />
         </div> -->
-        <LayoutNavItem ref="currentElement" :route-index="currentPathIndex" :route="currentRoute">
+        <LayoutNavItem :route-index="currentPathIndex" :route="routeList[currentPathIndex]" is-route-slot>
             <slot />
         </LayoutNavItem>
-        <LayoutNavItem v-show="isNavOpen" v-for="(routeItm, idx) in routesAfter" :route-index="idx + currentPathIndex + 1"
-            :route="routeItm">
-            <component :is="routeItm.contentComponent ?? Skeleton" />
-        </LayoutNavItem>
+        <!-- <div class="max-w-0 p-0 opacity-0 overflow-hidden">
+            <slot />
+        </div> -->
         <div v-if="isNavOpen" class="min-w-[50%] opacity-0 pointer-events-none"></div>
     </div>
 </template>
