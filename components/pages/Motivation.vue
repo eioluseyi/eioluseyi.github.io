@@ -3,7 +3,9 @@
         <LayoutPageTitle>Motivation</LayoutPageTitle>
         <LayoutContentWrapper>
             <p>
-                I'm a web developer who's passionate about using code to create beautiful and functional websites.
+                <span class="text-slate-400">I'm a web developer who's passionate about using code to create beautiful and
+                    functional websites.</span>
+                <br />
                 <br />
                 <br />
                 I was hooked on coding from the moment I started learning it in university, and I've been fascinated by CSS
