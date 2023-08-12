@@ -6,3 +6,15 @@ type RouteType = {
 };
 
 type RouteListType = RouteType[];
+
+type ExperienceType = {
+  from: string;
+  to: string;
+  company: string;
+  jobTitle: string;
+  companyLogo?: string;
+  projectImage?: string;
+  location?: string;
+  jobType?: string;
+  isSelected?: boolean;
+};
