@@ -11,13 +11,13 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 ✅ Horizontal scroll for nav view
 
 - Experience content
-- Link preview on text based links (Kevin Powell, Amit Sheen)
+- Projects content, using github api
 - Contact page
 - Mobile responsiveness
-- Projects content, using github api
+- Link preview on text based links (Kevin Powell, Amit Sheen)
 - Add version for @media (prefers-reduced-motion)
-- Change repo name to eioluseyi.github.io
-- Change project name in package.json
+  ✅ Change repo name to eioluseyi.github.io
+  ✅ Change project name in package.json
   <br />
   <br />
 
