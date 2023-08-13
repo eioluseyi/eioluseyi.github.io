@@ -27,7 +27,7 @@ const handleScroll = (evt: Event) => {
 };
 
 watchEffect(() => {
-    const currElm = elementRefList.value[currentPathIndex.value] as HTMLElement & { componentRef: HTMLElement }; // currentElement.value?.componentRef;
+    const currElm = elementRefList.value[currentPathIndex.value] as HTMLElement & { componentRef: HTMLElement };
 
     if (isNavOpen.value && scrollWrapper.value && currElm.componentRef) {
         nextTick(() => {
@@ -48,25 +48,15 @@ provide('scrollPercentage', scrollPercentage);
             :is-current-route="idx === currentPathIndex">
             <component :is="routeItm.contentComponent ?? Skeleton" />
         </LayoutNavItem>
-        <!-- <div class="min-w-full sticky p-6 pb-0 rounded-3xl transition-al duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
-            :class="{ '[&>div]:pointer-events-none !duration-700 backdrop-blur-2xl bg-[#1F232Ddd] border shadow-3xl': isNavOpen }"
-            :style="`translate: ${translateValue}% 0px; filter: blur(${blurValue}px); scale: ${scaleValue}; margin-left: ${marginValue}%; left: ${stickyLeftValue}%`"
-            ref="currentElement" @click="isNavOpen && onNavClose && onNavClose()">
-            <slot />
-        </div> -->
         <LayoutNavItem :route-index="currentPathIndex" :route="routeList[currentPathIndex]" is-route-slot>
             <slot />
         </LayoutNavItem>
-        <!-- <div class="max-w-0 p-0 opacity-0 overflow-hidden">
-            <slot />
-        </div> -->
         <div v-if="isNavOpen" class="min-w-[50%] opacity-0 pointer-events-none"></div>
     </div>
 </template>
 
 <style scoped>
 .masked-side {
-
     --mask-gradient: to left, transparent, black 30px calc(100% - 30px);
     -webkit-mask-image: linear-gradient(var(--mask-gradient));
     mask-image: linear-gradient(var(--mask-gradient));
