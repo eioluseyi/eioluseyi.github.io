@@ -10,16 +10,15 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 
 ✅ Horizontal scroll for nav view
 ✅ Experience content
-
-- Projects content, using github api
-- Contact page
-- Mobile responsiveness
-- Link preview on text based links (Kevin Powell, Amit Sheen)
-- Add nav version for @media (prefers-reduced-motion)
-  ✅ Change repo name to eioluseyi.github.io
-  ✅ Change project name in package.json
-  <br />
-  <br />
+✅ Change repo name to eioluseyi.github.io
+✅ Change project name in package.json
+⬜️ Projects content, using github api
+⬜️ Contact page
+⬜️ Mobile responsiveness
+⬜️ Link preview on text based links (Kevin Powell, Amit Sheen)
+⬜️ Add nav version for @media (prefers-reduced-motion)
+<br />
+<br />
 
 #### Css bg to try
 
