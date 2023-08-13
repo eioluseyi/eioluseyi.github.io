@@ -14,4 +14,5 @@ type ExperienceType = {
   jobTitle: string;
   companyLogo?: string;
   description?: string;
+  projectUrl?: string;
 };
