@@ -1,17 +1,7 @@
 <script setup lang="ts">
-import EXPERIENCE_LIST from "../../content/EXPERIENCE_LIST.json";
+import EXPERIENCE_LIST from "~/content/EXPERIENCE_LIST.json";
 
-const experienceList = ref<{
-    from: string;
-    to: string;
-    company: string;
-    jobTitle: string;
-    companyLogo?: string;
-    projectImage?: string;
-    location?: string;
-    jobType?: string;
-    isSelected?: boolean;
-}[]>(EXPERIENCE_LIST);
+const experienceList = ref<ExperienceType[]>(EXPERIENCE_LIST);
 
 const downloadResume = () => {
     const link = document.createElement('a');
