@@ -13,8 +13,5 @@ type ExperienceType = {
   company: string;
   jobTitle: string;
   companyLogo?: string;
-  projectImage?: string;
-  location?: string;
-  jobType?: string;
-  isSelected?: boolean;
+  description?: string;
 };
