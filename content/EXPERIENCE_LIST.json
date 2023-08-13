@@ -5,7 +5,8 @@
         "company": "Crescat AS",
         "jobTitle": "Frontend Engineer",
         "companyLogo": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1691882327/wenhw8vhbqs2whsgkicj.jpg",
-        "description": "Migrated an event management system, serving over 25k customers from Vue2 to Vue3 with TypeScript support and Tailwind."
+        "description": "Migrated an event management system, serving over 25k customers from Vue2 to Vue3 with TypeScript support and Tailwind.",
+        "projectUrl": "https://crescat.io/"
     },
     {
         "from": "2021",
@@ -13,7 +14,8 @@
         "company": "Habari Pay",
         "jobTitle": "Frontend Web Developer",
         "companyLogo": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1691890917/5uJELPrgpV2Fzh0_ERkxwLAI7G1VX3RyJMMz3nG-4KFCdIjK1vpTSvi7f5aQElKFjkKg_ewagc9.png",
-        "description": "Contributed to the frontend development of a payment gateway system with ReactJs and NextJs, including UI design, logic optimization, and marketing website development."
+        "description": "Contributed to the frontend development of a payment gateway system with ReactJs and NextJs, including UI design, logic optimization, and marketing website development.",
+        "projectUrl": "https://squadco.com/"
     },
     {
         "from": "2018",
