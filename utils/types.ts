@@ -1,4 +1,11 @@
-type SkillItemType = "react" | "vue" | "nuxt" | "next";
+type SkillItemType =
+  | "react"
+  | "vue"
+  | "nuxt"
+  | "next"
+  | "typescript"
+  | "tailwind"
+  | "scss";
 
 type RouteType = {
   path: string;

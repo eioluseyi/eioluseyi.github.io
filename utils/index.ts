@@ -1,4 +1,9 @@
-import { PagesExperience, PagesHome, PagesMotivation } from "#components";
+import {
+  PagesExperience,
+  PagesHome,
+  PagesMotivation,
+  PagesProjects,
+} from "#components";
 
 export const routeList: RouteListType = [
   {
@@ -15,6 +20,7 @@ export const routeList: RouteListType = [
   },
   {
     path: "/projects",
+    contentComponent: PagesProjects,
   },
   {
     path: "/say-hello",
