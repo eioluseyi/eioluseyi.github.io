@@ -1,0 +1,49 @@
+[
+    {
+        "imageSrc": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1692014390/Screenshot_2023-08-14_at_12.59.13_PM_emnho8.png",
+        "name": "REPUB",
+        "description": "A proof of concept application that shows an overview of the active branches on a GitHub repository.",
+        "githubUrl": "https://github.com/eioluseyi/repub",
+        "appUrl": "https://git-repub.netlify.app/",
+        "skills": [
+            "react",
+            "typescript",
+            "scss"
+        ]
+    },
+    {
+        "imageSrc": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1692083971/repository-open-graph-image_w33tbt.png",
+        "name": "iDares UI",
+        "description": "A collection of select accessible and customizable react UI components, currently starring a pagination component.",
+        "githubUrl": "https://github.com/eioluseyi/idares-ui",
+        "appUrl": "https://idares-ui.netlify.app/",
+        "skills": [
+            "react",
+            "typescript"
+        ]
+    },
+    {
+        "imageSrc": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1675798271/poca/thumbnail_pwb43i.png",
+        "name": "POCA",
+        "description": "The pomodoro challenge app designed to boost productivity.",
+        "githubUrl": "https://github.com/eioluseyi/poca-client",
+        "appUrl": "https://tpca.netlify.app/",
+        "skills": [
+            "react",
+            "next"
+        ]
+    },
+    {
+        "imageSrc": "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1692084053/Screenshot_2023-08-15_at_8.20.30_AM_kt0en4.png",
+        "name": "LinkSights",
+        "description": "A web app to help you Get valuable Insights on your links.",
+        "githubUrl": "https://github.com/eioluseyi/link-sights",
+        "appUrl": "https://linksights.netlify.app/",
+        "skills": [
+            "vue",
+            "nuxt",
+            "typescript",
+            "tailwind"
+        ]
+    }
+]
