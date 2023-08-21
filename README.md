@@ -15,7 +15,7 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - ✅ Projects content, ⚠️ using github api
 - ✅ Contact page
 - ⬜️ Mobile responsiveness
-- ⬜️ Link preview on text based links (Kevin Powell, Amit Sheen)
+- ⬜️ Fix all page preloading due to nav menu (load only current and visited pages and show skeleton for the rest)
 - ⬜️ Add nav version for @media (prefers-reduced-motion)
   <br />
   <br />
