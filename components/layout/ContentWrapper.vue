@@ -1,6 +1,10 @@
+<script setup lang="ts">
+const isTouchScreen = useIsTouchScreen();
+</script>
+
 <template>
-    <div
-        class="flex-1 overflow-hidden [&_a]:ease-out [&_a]:transition-all [&_a]:duration-300 hover:overflow-auto text-sm pt-6 pb-5 [&_a]:whitespace-nowrap [&_a]:text-slate-300 [&_a:hover]:text-slate-400 content-wrapper">
+    <div class="flex-1 [&_a]:ease-out [&_a]:transition-all [&_a]:duration-300 hover:overflow-auto text-sm pt-6 pb-5 [&_a]:whitespace-nowrap [&_a]:text-slate-300 [&_a:hover]:text-slate-400 content-wrapper"
+        :class="`${isTouchScreen ? 'overflow-auto' : 'overflow-hidden'}`">
         <slot />
     </div>
 </template>
