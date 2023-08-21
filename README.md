@@ -13,7 +13,7 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - ✅ Change repo name to eioluseyi.github.io
 - ✅ Change project name in package.json
 - ✅ Projects content, ⚠️ using github api
-- ⬜️ Contact page
+- ✅ Contact page
 - ⬜️ Mobile responsiveness
 - ⬜️ Link preview on text based links (Kevin Powell, Amit Sheen)
 - ⬜️ Add nav version for @media (prefers-reduced-motion)
