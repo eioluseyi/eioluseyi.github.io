@@ -16,7 +16,7 @@ const setMousePosition = (evt: MouseEvent) => {
 <template>
   <div class="main-wrapper" :style="`--mouse-x: ${mousePosition.x}; --mouse-y: ${mousePosition.y}`"
     @mousemove="setMousePosition">
-    <div class="glow-bg before:animate-pulse grid place-items-center h-screen">
+    <div class="glow-bg before:animate-pulse grid place-items-center h-[100dvh]">
       <NuxtLayout>
         <NuxtPage :transition="{
           name: 'layout',

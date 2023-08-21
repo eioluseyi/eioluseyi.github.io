@@ -12,7 +12,7 @@ provide('onNavToggle', onNavToggle);
 </script>
 
 <template>
-    <div class="max-w-lg h-full aspect-[9/16] overflow-hidden p-8">
+    <div class="max-w-lg h-full max-h-[910px] aspect-[9/16] overflow-hidden p-8">
         <div
             class="h-full rounded-[32px] p-[2px] bg-gradient-to-br from-[#6D3474] via-30% via-[#1B1F28] to-[#2C323A] shadow-2xl shadow-black">
             <div
