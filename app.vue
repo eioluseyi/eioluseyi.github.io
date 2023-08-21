@@ -68,7 +68,7 @@ const setMousePosition = (evt: MouseEvent) => {
 
     background-color: #6D3474;
 
-    animation-duration: 5s;
+    animation-duration: 3s;
     z-index: -1;
   }
 
@@ -76,16 +76,31 @@ const setMousePosition = (evt: MouseEvent) => {
     transition: filter 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out, left 0.3s ease-out, top 0.3s ease-out;
     filter: blur(100px);
     --glow-width: 400px;
+    animation-duration: 5s;
   }
 
   &::after {
     position: absolute;
     content: "";
     inset: 0;
-    background-image: url(../assets/img/honeycomb-bg.png);
     background-repeat: repeat;
-    background-size: 13%;
     z-index: -1;
+
+    --s: 10px;
+    /* control the size */
+    --c1: #000;
+    --c2: #ecbe1300;
+
+    --c: #0000, var(--c1) .5deg 119.5deg, #0000 120deg;
+    --g1: conic-gradient(from 60deg at 56.25% calc(425%/6), var(--c));
+    --g2: conic-gradient(from 180deg at 43.75% calc(425%/6), var(--c));
+    --g3: conic-gradient(from -60deg at 50% calc(175%/12), var(--c));
+    background:
+      var(--g1), var(--g1) var(--s) calc(1.73*var(--s)),
+      var(--g2), var(--g2) var(--s) calc(1.73*var(--s)),
+      var(--g3) var(--s) 0, var(--g3) 0 calc(1.73*var(--s)) var(--c2);
+    background-size: calc(2*var(--s)) calc(3.46 * var(--s));
+    /* background-size: 3%; */
   }
 }
 </style>
