@@ -3,6 +3,7 @@ import {
   PagesHome,
   PagesMotivation,
   PagesProjects,
+  PagesReachOut,
 } from "#components";
 
 export const routeList: RouteListType = [
@@ -23,7 +24,8 @@ export const routeList: RouteListType = [
     contentComponent: PagesProjects,
   },
   {
-    path: "/say-hello",
+    path: "/reach-out",
+    contentComponent: PagesReachOut,
   },
 ];
 

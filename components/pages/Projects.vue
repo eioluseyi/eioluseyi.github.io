@@ -21,7 +21,7 @@ import PROJECTS_LIST from "~/content/PROJECTS_LIST.json";
             </Carousel>
         </div>
         <div class="w-full py-4">
-            <LinkButton label="Reach out" href="/react-out" />
+            <LinkButton label="Reach out" href="/reach-out" />
         </div>
     </div>
 </template>
