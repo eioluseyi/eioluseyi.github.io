@@ -8,6 +8,9 @@ useSeoMeta({
 const mousePosition = reactive({ x: "50%", y: "50%" });
 
 const setMousePosition = (evt: MouseEvent) => {
+  const width = window.innerWidth;
+  if (width <= 600) return; // Don't work on mobile
+
   mousePosition.x = `${evt.clientX}px`;
   mousePosition.y = `${evt.clientY}px`;
 }
