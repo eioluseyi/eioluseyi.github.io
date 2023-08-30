@@ -26,9 +26,9 @@ const setFallback = (evt: Event) => {
                 <div class="font-bold italic">{{ item.jobTitle }}</div>
             </div>
         </div>
-        <div class="text-xs ml-[50px]">{{ item.description }} <NuxtLink v-if="item.projectUrl"
-                class="inline-flex gap-1 items-center lowercase font-bold !text-slate-300" :href="item.projectUrl || '#'"
-                target="_blank">
+        <div class="text-xs min-[400px]:ml-[50px] max-[400px]:ml-[5px] max-[400px]:mt-1 ">{{ item.description }} <NuxtLink
+                v-if="item.projectUrl" class="inline-flex gap-1 items-center lowercase font-bold !text-slate-300"
+                :href="item.projectUrl || '#'" target="_blank">
                 View <i class="gg-external [--ggs:0.5]" /></NuxtLink>
         </div>
 

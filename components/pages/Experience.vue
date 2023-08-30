@@ -16,12 +16,12 @@ const downloadResume = () => {
 <template>
     <div class="flex flex-col text-slate-500">
         <LayoutPageTitle>Experience</LayoutPageTitle>
-        <div class="text-sm text-slate-400 my-5">
-            Frontend Engineer with 5+ years of experience in building <span class="whitespace-nowrap">user-friendly</span>,
-            visually captivating and
-            <span class="whitespace-nowrap">high-quality</span>
-            web experiences. Proven ability to work independently and as part of a team, meeting deadlines under
-            pressure.
+        <div class="min-[600px]:text-sm max-[600px]:text-xs text-slate-400 my-5">
+            Frontend Engineer with 5+ years of experience in building visually captivating and
+            <span class="whitespace-nowrap">high-quality</span> web experiences.<span
+                class="max-[400px]:hidden "><br />Proven
+                ability to work independently and as part of a team, meeting deadlines under
+                pressure.</span>
         </div>
         <LayoutContentWrapper class="">
             <div class="py-">
