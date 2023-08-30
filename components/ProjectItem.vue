@@ -22,13 +22,13 @@ defineProps<Props>();
                 <Navigation />
             </div>
         </div>
-        <p class="text-sm">{{ item.description }}</p>
         <div class="mt-2 mb-6">
             <SkillList class="!justify-start" :itemList="(item.skills as SkillItemType[])" size="icon" />
         </div>
         <div class="rounded w-full aspect-video bg-slate-200 project-image"
             :style="`background-image: url('${item.imageSrc}')`" />
         <div class="flex-1 flex flex-col mt-1 text-sm">
+            <p class="text-sm">{{ item.description }}</p>
             <div class="flex gap-4 mt-4 text-slate-300 [&_*]:fill-current">
                 <NuxtLink class="flex gap-1 items-center font-bold pr-4 border-r border-current" :to="item.githubUrl"
                     target="_blank">
