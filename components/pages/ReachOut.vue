@@ -67,7 +67,7 @@ watchEffect(() => {
                 Feel free to drop me a line using the form or any of my socials.
             </div>
             <LayoutContentWrapper>
-                <form class="grid gap-4 pb-8" @submit="handleSubmit">
+                <form class="grid gap-4" @submit="handleSubmit">
                     <TextInput v-model="fullName" label="Full name"
                         :error-message="showErrorMessage ? errors.fullName : ''" />
                     <TextInput v-model="email" label="Email" :error-message="showErrorMessage ? errors.email : ''" />
@@ -75,11 +75,10 @@ watchEffect(() => {
                         long-text />
                     <PrimayButton class="!text-base !text-white" :label="isLoading ? 'Sending' : 'Send'" type="submit"
                         :is-loading="isLoading" />
-                    <br />
-                    <div class="flex justify-center [&>*]:scale-150">
-                        <SocialMediaList no-git />
-                    </div>
                 </form>
+                <div class="pt-6 flex justify-center [&>*]:scale-150">
+                    <SocialMediaList no-git />
+                </div>
             </LayoutContentWrapper>
         </div>
         <div class="absolute inset-0 grid place-items-center opacity-0 pointer-events-none transition-all duration-300 ease-out"
