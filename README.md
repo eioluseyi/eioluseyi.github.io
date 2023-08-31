@@ -15,9 +15,15 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - ✅ Projects content, ⚠️ using github api
 - ✅ Contact page
 - ⬜️ Mobile responsiveness
-- ⬜️ Fix all page preloading due to nav menu (load only current and visited pages and show skeleton for the rest)
+  - ✅ Add responsive mode for 700px height min
+  - ⬜️ Remove back button on mobile
+  - ⬜️ Optimize nav scrolling on mobile
+- ⬜️ Change home page icon to home
+- ⬜️ Check on form subission clearing
+- ⬜️ Fix all page pre-loading due to nav menu (load only current and visited pages and show skeleton for the rest)
 - ⬜️ Add nav version for @media (prefers-reduced-motion)
-- ⬜️ Clear comments
 - ⬜️ Add drop-shadow for nav items in isNavOpen mode
+- ⬜️ Clear comments
+- ⬜️ Add about website page (Behind the device)
   <br />
   <br />

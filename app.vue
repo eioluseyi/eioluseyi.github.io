@@ -9,7 +9,9 @@ const mousePosition = reactive({ x: "50%", y: "50%" });
 
 const setMousePosition = (evt: MouseEvent) => {
   const width = window.innerWidth;
+  const height = window.innerHeight;
   if (width <= 600) return; // Don't work on mobile
+  if (height <= 750) return; // Don't work on short devices
 
   mousePosition.x = `${evt.clientX}px`;
   mousePosition.y = `${evt.clientY}px`;
@@ -40,6 +42,22 @@ const setMousePosition = (evt: MouseEvent) => {
 .main-wrapper {
   background-color: #0f0f0f;
   cursor: none;
+}
+
+@media screen and (max-width: 600px) {
+
+  .glow-bg::before,
+  .glow-bg::after {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 750px) {
+
+  .glow-bg::before,
+  .glow-bg::after {
+    display: none;
+  }
 }
 
 .glow-bg {

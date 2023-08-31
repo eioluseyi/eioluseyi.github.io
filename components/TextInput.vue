@@ -26,8 +26,8 @@ watchEffect(() => {
 
 <template>
     <label
-        class="relative overflow-hidden flex items-center bg-slate-500 bg-opacity-10 transition-all border border-transparent hover:border-[#0CA9FF] focus-within:border-[#0CA9FF] rounded-full min-[400px]:px-8 min-[400px]:py-4 max-[400px]:px-4 max-[400px]:py-2 max-[400px]:text-sm min-[400px]:h-14 max-[400px]:h-10 [&>*:not(div)]:w-full [&>*:not(div)]:h-full [&>*]:outline-none [&>*]:resize-none [&>*]:bg-transparent [&>*]:text-slate-200 [&>*]:placeholder:text-slate-500"
-        :class="{ 'min-[400px]:h-28 max-[400px]:h-24 min-[400px]:!rounded-3xl max-[400px]:!rounded-2xl': longText, '!border-red-600': errorMessage }">
+        class="input-item relative overflow-hidden flex items-center bg-slate-500 bg-opacity-10 transition-all border border-transparent hover:border-[#0CA9FF] focus-within:border-[#0CA9FF] rounded-full min-[400px]:px-8 min-[400px]:py-4 max-[400px]:px-4 max-[400px]:py-2 max-[400px]:text-sm min-[400px]:h-14 max-[400px]:h-10 [&>*:not(div)]:w-full [&>*:not(div)]:h-full [&>*]:outline-none [&>*]:resize-none [&>*]:bg-transparent [&>*]:text-slate-200 [&>*]:placeholder:text-slate-500"
+        :class="{ 'input-item-long min-[400px]:h-28 max-[400px]:h-24 min-[400px]:!rounded-3xl max-[400px]:!rounded-2xl': longText, '!border-red-600': errorMessage }">
         <textarea v-if="longText" ref="inputElement" :model-value="modelValue" :placeholder="label"
             @input="emit('update:modelValue', ($event?.target as HTMLInputElement)?.value)" />
         <input v-else ref="inputElement" :model-value="modelValue" :placeholder="label"
@@ -35,3 +35,19 @@ watchEffect(() => {
         <div class="absolute bottom-px right-8 !text-red-600 text-xs">{{ errorMessage }}</div>
     </label>
 </template>
+
+<style scoped>
+@media screen and (max-height: 700px) {
+    .input-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        height: 2.5rem;
+
+        &.input-item-long {
+            height: 5rem;
+            border-radius: 1rem !important;
+        }
+    }
+}
+</style>
