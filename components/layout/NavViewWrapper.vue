@@ -42,7 +42,7 @@ provide('scrollPercentage', scrollPercentage);
 </script>
 
 <template>
-    <div class="flex flex-co flex-1 h-full relative overflow-y-hidden overflow-x-scroll no-scrollbar"
+    <div class="flex flex-1 h-full w-full max-w-xl mx-auto relative overflow-y-hidden overflow-x-scroll no-scrollbar"
         :class="{ 'masked-side': isNavOpen }" ref="scrollWrapper" @scroll="handleScroll">
         <LayoutNavItem v-for="(routeItm, idx) in routeList" :route-index="idx" :route="routeItm" ref="elementRefList"
             :is-current-route="idx === currentPathIndex">
