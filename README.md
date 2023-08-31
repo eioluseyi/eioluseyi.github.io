@@ -16,9 +16,10 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - ✅ Contact page
 - ⬜️ Mobile responsiveness
   - ✅ Add responsive mode for 700px height min
-  - ⬜️ Remove back button on mobile
+  - ✅ Remove back button on mobile
   - ⬜️ Optimize nav scrolling on mobile
 - ⬜️ Change home page icon to home
+- ⬜️ Fix nav button click layout shift
 - ⬜️ Check on form subission clearing
 - ⬜️ Fix all page pre-loading due to nav menu (load only current and visited pages and show skeleton for the rest)
 - ⬜️ Add nav version for @media (prefers-reduced-motion)
