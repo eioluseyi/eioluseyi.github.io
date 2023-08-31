@@ -23,8 +23,9 @@ provide('onNavToggle', onNavToggle);
                 </LayoutNavViewWrapper>
                 <div
                     class="flex w-full min-h-[64px] h-16 items-center justify-between max-w-xs mx-auto px-4 mb-0 mt-auto text-white">
-                    <LayoutBackButton />
+                    <LayoutBackButton class="max-[600px]:hidden" />
                     <LayoutHomeButton @click="onNavClose" />
+                    <span class="w-full border border-dashed min-[600px]:hidden border-slate-700 rounded-full mx-8" />
                     <LayoutNavMenuButton @click="onNavToggle" />
                 </div>
             </div>
