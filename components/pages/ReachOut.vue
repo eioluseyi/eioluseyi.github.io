@@ -27,12 +27,13 @@ const postSubmission = async () => {
 
     try {
         await $fetch(url, { method: "POST", body: form_data });
+    } catch { return; } finally {
+        isLoading.value = false;
 
+        // handle everything in finally, since formspree api has a weird behaviour
         showSent.value = true;
         setTimeout(() => showSent.value = false, 2000);
         setTimeout(resetForm, 500);
-    } catch { return; } finally {
-        isLoading.value = false;
     }
 
 }
