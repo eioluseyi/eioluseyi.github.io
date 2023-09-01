@@ -1,8 +1,30 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
+const SEO = {
+  TITLE: 'Emmanuel Imolorhe | @eioluseyi',
+  URL: 'https://eioluseyi.github.io/',
+  IMAGE: 'https://res.cloudinary.com/dfe4nl5xi/image/upload/v1693538339/Screenshot_2023-09-01_at_3.59.02_AM_ptqn5i.png',
+  DESCRIPTION: 'Get to the potential exploits I can do when I join your team.'
+}
+
 useSeoMeta({
-  title: 'Emmanuel Imolorhe | @eioluseyi'
+  title: SEO.TITLE,
+  ogUrl: SEO.URL,
+  ogType: 'website',
+  ogSiteName: SEO.TITLE,
+  ogTitle: SEO.TITLE,
+  ogImage: SEO.IMAGE,
+  ogDescription: SEO.DESCRIPTION,
+  twitterCard: 'summary_large_image',
+  twitterAppUrlIphone: SEO.URL,
+  twitterAppUrlIpad: SEO.URL,
+  twitterAppUrlGoogleplay: SEO.URL,
+  twitterSite: SEO.TITLE,
+  twitterTitle: SEO.TITLE,
+  twitterImage: SEO.IMAGE,
+  twitterDescription: SEO.DESCRIPTION,
+  description: SEO.DESCRIPTION,
 })
 
 const mousePosition = reactive({ x: "50%", y: "50%" });
