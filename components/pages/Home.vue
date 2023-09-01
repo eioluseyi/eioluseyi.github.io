@@ -6,7 +6,7 @@ useSeoMeta({
 const dpSrc = "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1690682318/Prof-DP_a4qun6.jpg";
 const name = "Emmanuel Imolorhe";
 const jd = "Frontend Engineer";
-const company = "Crescat AS";
+const company = "Habari Pay";
 const logoSrc = "https://res.cloudinary.com/dfe4nl5xi/image/upload/v1690784856/eio-dp_wbozzr.jpg";
 const description = "I am genuinely enthusiastic about crafting exceptional user experiences through user-friendly and captivating web applications.";
 </script>
