@@ -33,7 +33,7 @@ watchEffect(() => {
     const hideClass = 'opacity-0 !p-0 !min-w-0 !max-w-0 !overflow-hidden';
     const showClass = 'opacity-100 min-[400px]:p-6 max-[400px]:p-4 pb-0 min-w-full max-w-full';
     const slotDefaultClass = '!absolute !duration-0 !m-0 border-0 !bg-transparent backdrop-blur-[0] [&>div]:pointer-events-auto inset-0 z-10';
-    const defaultNavOpenClass = 'transition-all !duration-700 backdrop-blur-2xl bg-[#1F232DDD] left-0 ml-[-30%] border shadow-3xl';
+    const defaultNavOpenClass = 'transition-all !duration-700 backdrop-blur-2xl bg-[#1F232DDD] left-0 ml-[-30%] border shadow-lg';
 
     // Default setting for route slot
     if (props.isRouteSlot) classes.value = twMerge(classes.value, slotDefaultClass);
@@ -66,7 +66,7 @@ defineExpose({ componentRef });
 
 <template>
     <div ref="componentRef"
-        class="min-w-full sticky min-[400px]:p-6 max-[400px]:p-4 pb-0 rounded-3xl custom-transition-properties [&>div]:pointer-events-none duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
+        class="min-w-full sticky min-[400px]:p-6 shadow-zinc-900/30 max-[400px]:p-4 pb-0 rounded-3xl custom-transition-properties [&>div]:pointer-events-none duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
         :class="classes" :style="`translate: ${translateValue}% 0px; filter: blur(${blurValue}px); scale: ${scaleValue}`"
         @click="loadPage">
         <slot />
