@@ -14,10 +14,9 @@ Honestly, I can't really pick out what the inspiration for this site was, but I 
 - ✅ Change project name in package.json
 - ✅ Projects content, ⚠️ using github api
 - ✅ Contact page
-- ⬜️ Mobile responsiveness
+- ✅ Mobile responsiveness
   - ✅ Add responsive mode for 700px height min
   - ✅ Remove back button on mobile
-  - ⬜️ Optimize nav scrolling on mobile
 - ✅ Change home page icon to home
 - ⬜️ Fix nav button click layout shift
 - ⬜️ Check on form subission clearing
