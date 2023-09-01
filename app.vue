@@ -5,7 +5,7 @@ const SEO = {
   TITLE: 'Emmanuel Imolorhe | @eioluseyi',
   URL: 'https://eioluseyi.github.io/',
   IMAGE: 'https://res.cloudinary.com/dfe4nl5xi/image/upload/v1693538339/Screenshot_2023-09-01_at_3.59.02_AM_ptqn5i.png',
-  DESCRIPTION: 'Get to the potential exploits I can do when I join your team.'
+  DESCRIPTION: 'Catch a glimpse of the potential exploits I can do when I join your team.'
 }
 
 useSeoMeta({
