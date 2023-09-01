@@ -1,0 +1,1 @@
+import{f as t,g as o,h as s,c as n,o as c}from"./entry.2d38e682.js";const a={class:"grid place-items-center text-3xl text-red-700"},d=t({__name:"[...404]",setup(r){const{push:e}=o();return s(()=>{e("/")}),(p,_)=>(c(),n("div",a,"Whoops!"))}});export{d as default};
