@@ -27,6 +27,18 @@ useSeoMeta({
   description: SEO.DESCRIPTION,
 })
 
+useHead({
+  script: [{ async: true, src: "https://www.googletagmanager.com/gtag/js?id=G-S4ZP1QQL0N" }, {
+    innerHTML: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-S4ZP1QQL0N');
+    `
+  }]
+})
+
 const mousePosition = reactive({ x: "50%", y: "50%" });
 
 const setMousePosition = (evt: MouseEvent) => {
