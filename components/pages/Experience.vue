@@ -5,7 +5,7 @@ const experienceList = ref<ExperienceType[]>(EXPERIENCE_LIST);
 
 const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Resume.pdf';
+    link.href = 'https://drive.google.com/file/d/1kUwsopSq8H-0GTas0KTUt5jcN8obUOyM/view?usp=share_link';
     link.download = 'Imolorhe_Emmanuel_Resume.pdf';
     link.target = '_blank';
     link.click();
