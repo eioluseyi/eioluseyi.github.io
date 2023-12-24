@@ -22,7 +22,7 @@ const itemFraction = computed(() => (props.routeIndex + 1) / routeList.length);
 const { translateValue, blurValue, scaleValue } = useNavScroll({ itemFraction, scrollPercentage });
 
 const loadPage = () => {
-    if (isNavOpen && onNavClose) {
+    if (isNavOpen.value && onNavClose) {
         router.push(props.route.path);
         onNavClose();
     }
@@ -65,7 +65,7 @@ defineExpose({ componentRef });
 </script>
 
 <template>
-    <div ref="componentRef"
+    <div ref="componentRef" :role="!isCurrentRoute ? 'presentation' : ''" :aria-hidden="!isCurrentRoute"
         class="min-w-full sticky min-[400px]:p-6 -shadow-zinc-900/30 max-[400px]:p-4 pb-0 rounded-3xl custom-transition-properties [&>div]:pointer-events-none duration-300 ease-[cubic-bezier(0,1,0.7,1.02)] overflow-hidden border-[#ffffff07] flex-1 [&>div]:h-full [&>div]:overflow-hidden"
         :class="classes" :style="`translate: ${translateValue}% 0px; filter: blur(${blurValue}px); scale: ${scaleValue}`"
         @click="loadPage">
