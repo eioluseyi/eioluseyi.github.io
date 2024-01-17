@@ -12,8 +12,8 @@ const route = useRoute();
 const currentPathIndex = computed<number>(() => {
     /**
      * get current path
-     * find path in routesList
-     * get path index in routesList
+     * find path in `routesList`
+     * get path index in `routesList`
      */
     const path = route.path;
     return routeList.findIndex(itm => itm.path === path) ?? 0;
