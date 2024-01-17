@@ -1,0 +1,1 @@
+import{_ as t,o,c as n,n as s}from"./entry.cebbf633.js";const c={},_={class:"text-slate-200 min-[400px]:text-[3em] max-[400px]:text-[2.5em] font-extrabold"};function r(e,a){return o(),n("h1",_,[s(e.$slots,"default")])}const l=t(c,[["render",r]]);export{l as _};
