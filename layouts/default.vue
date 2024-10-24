@@ -13,19 +13,19 @@ provide('onNavToggle', onNavToggle);
 
 <template>
     <div
-        class="default-layout-wrapper min-[600px]:max-w-lg h-full max-[600px]:w-full min-[600px]:max-h-[910px] min-[600px]:aspect-[9/16] overflow-hidden min-[600px]:p-8">
+        class="fixed min-[600px]:p-8 max-[600px]:w-full min-[600px]:max-w-lg h-full min-[600px]:max-h-[910px] default-layout-wrapper min-[600px]:aspect-[9/16] overflow-hidden">
         <div
-            class="default-layout-rounded-wrapper h-full min-[600px]:rounded-[32px] min-[600px]:p-[2px] bg-gradient-to-br from-[#6D3474] via-30% via-[#1B1F28] to-[#2C323A] -shadow-2xl -shadow-black">
+            class="bg-gradient-to-br from-[#6D3474] via-[#1B1F28] via-30% to-[#2C323A] -shadow-2xl -shadow-black min-[600px]:p-[2px] default-layout-rounded-wrapper min-[600px]:rounded-[32px] h-full">
             <div
-                class="default-layout-rounded-child-wrapper flex flex-col relative show-cursor hover:cursor-auto bg-gradient-to-br from-[#1B1F2899] to-40% to-[#1B1F28dd] h-full w-full overflow-hidden backdrop-blur min-[600px]:rounded-[30px]">
+                class="relative flex flex-col bg-gradient-to-br from-[#1B1F2899] to-[#1B1F28dd] to-40% backdrop-blur default-layout-rounded-child-wrapper min-[600px]:rounded-[30px] show-cursor w-full h-full hover:cursor-auto overflow-hidden">
                 <LayoutNavViewWrapper>
                     <slot />
                 </LayoutNavViewWrapper>
                 <div
-                    class="flex w-full min-h-[64px] h-16 items-center justify-between max-w-xs mx-auto px-4 mb-0 mt-auto text-white">
+                    class="flex justify-between items-center mx-auto mt-auto mb-0 px-4 w-full max-w-xs h-16 min-h-[64px] text-white">
                     <LayoutBackButton class="max-[600px]:hidden" />
                     <LayoutHomeButton @click="onNavClose" />
-                    <span class="w-full border border-dashed min-[600px]:hidden border-slate-700 rounded-full mx-8" />
+                    <span class="border-slate-700 min-[600px]:hidden mx-8 border border-dashed rounded-full w-full" />
                     <LayoutNavMenuButton @click="onNavToggle" />
                 </div>
             </div>

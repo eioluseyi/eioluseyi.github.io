@@ -40,7 +40,13 @@ useHead({
 
       gtag('config', 'G-S4ZP1QQL0N');
     `
-  }]
+  }],
+  link: [
+    {
+      rel: 'me',
+      href: 'https://mastodon.social/@eioluseyi'
+    }
+  ]
 })
 
 const mousePosition = reactive({ x: "50%", y: "50%" });
@@ -59,7 +65,7 @@ const setMousePosition = (evt: MouseEvent) => {
 <template>
   <div class="main-wrapper" :style="`--mouse-x: ${mousePosition.x}; --mouse-y: ${mousePosition.y}`"
     @mousemove="setMousePosition">
-    <div class="glow-bg before:animate-pulse grid place-items-center h-[100dvh]">
+    <div class="place-items-center grid glow-bg h-[100svh] before:animate-pulse">
       <NuxtLayout>
         <NuxtPage :transition="{
           name: 'layout',

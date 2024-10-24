@@ -5,7 +5,7 @@ const scrollWrapper = ref();
 const scrollPercentage = ref(0);
 const elementRefList = ref<HTMLElement[]>([]);
 const isNavOpen = ref(inject("isNavOpen"));
-const onNavClose = inject<() => void>("onNavClose");
+// const onNavClose = inject<() => void>("onNavClose");
 
 const route = useRoute();
 
@@ -42,7 +42,7 @@ provide('scrollPercentage', scrollPercentage);
 </script>
 
 <template>
-    <div class="flex flex-1 h-full w-full max-w-xl mx-auto relative overflow-y-hidden overflow-x-scroll no-scrollbar"
+    <div class="relative flex flex-1 mx-auto w-full max-w-xl h-full overflow-x-scroll overflow-y-hidden no-scrollbar"
         :class="{ 'masked-side': isNavOpen }" ref="scrollWrapper" @scroll="handleScroll">
         <LayoutNavItem v-for="(routeItm, idx) in routeList" :route-index="idx" :route="routeItm" ref="elementRefList"
             :is-current-route="idx === currentPathIndex">
@@ -51,7 +51,7 @@ provide('scrollPercentage', scrollPercentage);
         <LayoutNavItem :route-index="currentPathIndex" :route="routeList[currentPathIndex]" is-route-slot>
             <slot />
         </LayoutNavItem>
-        <div v-if="isNavOpen" class="min-w-[50%] opacity-0 pointer-events-none"></div>
+        <div v-if="isNavOpen" class="opacity-0 min-w-[50%] pointer-events-none"></div>
     </div>
 </template>
 
