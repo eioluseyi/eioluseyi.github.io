@@ -8,8 +8,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["~/modules/sitemap"],
-  sitemap: {
-    hostname: "https://eioluseyi.github.io",
-  },
+  // modules: ["~/modules/sitemap"],
+  // sitemap: {
+  //   hostname: "https://eioluseyi.github.io",
+  // },
 });
